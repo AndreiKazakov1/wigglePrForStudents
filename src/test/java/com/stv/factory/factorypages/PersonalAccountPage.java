@@ -15,5 +15,4 @@ public class PersonalAccountPage extends FactoryPage {
         return accountPage.isDisplayed();
     }
 
-
 }
