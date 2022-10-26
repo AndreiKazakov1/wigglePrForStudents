@@ -46,6 +46,8 @@ public class LoginPageStep {
     public void errorMassageIsDisplayed() {
         Assert.assertTrue(loginPage.isErrorMassageDisplayed(), "Error Massage isn't visible");
     }
+
+
 }
 
 

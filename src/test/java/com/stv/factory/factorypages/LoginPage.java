@@ -50,4 +50,5 @@ public class LoginPage extends FactoryPage {
 
     public void inputInvalidEmailRegAddressCuc(String adds){emailAddressFieldRegistration.sendKeys(adds);}
 
+    public void inputValidEmailRegAddressCuc(String adds){emailAddressFieldRegistration.sendKeys(adds);}
 }
