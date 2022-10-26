@@ -18,8 +18,11 @@ Feature: Personal account page success loading
       | password |
       | 111111   |
 
-    And The user click continue button
+
+  Scenario: 02. Go to personal account page (end)
+    And The user click sing in button
     Then  Personal account page is loaded
+    And Close browser
 
 
 

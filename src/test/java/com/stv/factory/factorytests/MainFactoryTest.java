@@ -33,7 +33,6 @@ public class MainFactoryTest extends BasicFactoryTest {
     }
 
 
-
     @Test (description = "Assert the account page is loaded")
     public void assertAccountPageOpened(){
         mainFactoryPage.clickOnTrustButton();
@@ -54,7 +53,6 @@ public class MainFactoryTest extends BasicFactoryTest {
         loginPage.clickContinueButton();
         boolean actualResult = loginPage.isErrorMassageDisplayed();
         Assert.assertEquals(actualResult, true, "Error Massage isn't visible");
-
 
     }
 
