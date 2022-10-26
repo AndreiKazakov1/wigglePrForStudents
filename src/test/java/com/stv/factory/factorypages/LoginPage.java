@@ -31,6 +31,12 @@ public class LoginPage extends FactoryPage {
     @FindBy(id="DualRegisterEmailModel_Email-error")
     private WebElement emailErrorMassage;
 
+    @FindBy(className = "bem-checkout__logo")
+    private WebElement wiggleIcon;
+
+
+
+
 
     public void inputEmailAddress(){emailAddressField.sendKeys(VALID_EMAIL);}
 
@@ -51,4 +57,6 @@ public class LoginPage extends FactoryPage {
     public void inputInvalidEmailRegAddressCuc(String adds){emailAddressFieldRegistration.sendKeys(adds);}
 
     public void inputValidEmailRegAddressCuc(String adds){emailAddressFieldRegistration.sendKeys(adds);}
+
+    public void clickOnWiggleIcon(){ wiggleIcon.click(); }
 }
