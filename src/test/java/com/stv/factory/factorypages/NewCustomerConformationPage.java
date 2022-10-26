@@ -8,6 +8,8 @@ public class NewCustomerConformationPage extends FactoryPage{
     @FindBy(xpath = "//*[@id=\"RegisterModel_Email\"]")
     private WebElement registerModelEmail;
 
+    public boolean NCConformationPageDisplayed(){ return registerModelEmail.isDisplayed(); }
+
     public String getEmailValue(){
        return registerModelEmail.getAttribute("value");
     }
