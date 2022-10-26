@@ -3,10 +3,9 @@ package com.stv.factory.factorytests;
 import com.stv.framework.core.drivers.Driver;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-
 import java.util.concurrent.TimeUnit;
-
 import static com.stv.framework.core.lib.WigglePageURLs.START_URL;
+
 
 public class BasicFactoryTest {
     public static WebDriver getDriver() {
@@ -20,7 +19,6 @@ public class BasicFactoryTest {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
-
 
 
     @AfterClass

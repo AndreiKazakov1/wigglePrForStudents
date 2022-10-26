@@ -12,8 +12,7 @@ public class LoginPage extends FactoryPage {
     public boolean isLoginContainerDisplayed(){
         return loginContainer.isDisplayed();
     }
-//*************************************************************
-//1-st
+
 
     @FindBy(xpath = "//*[@id=\"LogOnModel_UserName\"]")
     private WebElement emailAddressField;
@@ -26,8 +25,7 @@ public class LoginPage extends FactoryPage {
 
 
 
-//************************************************************
-//2-nd
+
     @FindBy(id="DualRegisterEmailModel_Email")
     private WebElement emailAddressFieldRegistration;
 
