@@ -13,7 +13,6 @@ public class LoginPage extends FactoryPage {
         return loginContainer.isDisplayed();
     }
 
-
     @FindBy(xpath = "//*[@id=\"LogOnModel_UserName\"]")
     private WebElement emailAddressField;
 
@@ -23,9 +22,6 @@ public class LoginPage extends FactoryPage {
     @FindBy(xpath = " //*[@id=\"qa-login\"]")
     private WebElement signInButton;
 
-
-
-
     @FindBy(id="DualRegisterEmailModel_Email")
     private WebElement emailAddressFieldRegistration;
 
@@ -34,8 +30,6 @@ public class LoginPage extends FactoryPage {
 
     @FindBy(id="DualRegisterEmailModel_Email-error")
     private WebElement emailErrorMassage;
-
-
 
 
     public void inputEmailAddress(){emailAddressField.sendKeys(VALID_EMAIL);}
@@ -49,5 +43,9 @@ public class LoginPage extends FactoryPage {
     public void clickContinueButton(){continueButton.click();}
 
     public boolean isErrorMassageDisplayed(){return emailErrorMassage.isDisplayed();}
+
+    public void inputEmailAddressCuc(String adr){emailAddressField.sendKeys(adr);}
+
+    public void inputEmailPasswordCuc(String pass){emailPasswordField.sendKeys(pass);}
 
 }
