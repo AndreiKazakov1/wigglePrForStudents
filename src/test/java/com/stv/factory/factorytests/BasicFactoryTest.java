@@ -2,10 +2,7 @@ package com.stv.factory.factorytests;
 
 import com.stv.framework.core.drivers.Driver;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,9 +17,10 @@ public class BasicFactoryTest {
     public void setUp() {
         WebDriver driver = getDriver();
         driver.get(START_URL);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
+
 
 
     @AfterClass

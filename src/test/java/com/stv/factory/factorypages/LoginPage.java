@@ -13,7 +13,7 @@ public class LoginPage extends FactoryPage {
         return loginContainer.isDisplayed();
     }
 //*************************************************************
-
+//1-st
 
     @FindBy(xpath = "//*[@id=\"LogOnModel_UserName\"]")
     private WebElement emailAddressField;
@@ -25,12 +25,31 @@ public class LoginPage extends FactoryPage {
     private WebElement signInButton;
 
 
+
+//************************************************************
+//2-nd
+    @FindBy(id="DualRegisterEmailModel_Email")
+    private WebElement emailAddressFieldRegistration;
+
+    @FindBy(id="qa-dual-register")
+    private WebElement continueButton;
+
+    @FindBy(id="DualRegisterEmailModel_Email-error")
+    private WebElement emailErrorMassage;
+
+
+
+
     public void inputEmailAddress(){emailAddressField.sendKeys(VALID_EMAIL);}
 
     public void inputEmailPassword(){emailPasswordField.sendKeys(VALID_PASSWORD);}
 
-    public void clickSignInButton(){
-        signInButton.click();
-    }
+    public void clickSignInButton(){ signInButton.click(); }
+
+    public void inputEmailAddressRegistration(){emailAddressFieldRegistration.sendKeys(NEW_INVALID_EMAIL);}
+
+    public void clickContinueButton(){continueButton.click();}
+
+    public boolean isErrorMassageDisplayed(){return emailErrorMassage.isDisplayed();}
 
 }
