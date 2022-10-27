@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
+import java.util.Random;
 
 
 public class PersonalTaskSteps {
@@ -15,20 +16,28 @@ public class PersonalTaskSteps {
     NewCustomerConformationPage newCustomerConformationPage = new NewCustomerConformationPage();
     WishListPage wishListPage = new WishListPage();
 
+    public String randEmail() {
+        Random random = new Random();
+        int x = random.nextInt(9999);
+        String email = "test" + x + "@gmail.com";
+        return email;
+    }
+
+    String email = randEmail();
+
     @Then("Conformation page is loaded")
     public void conformationPageIsLoaded() {
         Assert.assertTrue(newCustomerConformationPage.NCConformationPageDisplayed());
     }
 
-    @And("Input valid email registration {string}")
-    public void inputValidEmailRegistration(String addr) {
-        loginPage.inputValidEmailRegAddressCuc(addr);
+    @And("Input valid email registration address")
+    public void inputValidEmailRegistration() {
+        loginPage.inputValidEmailRegAddressCuc(email);
     }
 
-
-    @Then("See email address like {string} in the email-field")
-    public void canSeeEmailAddressInFieldSame(String adr) {
-        Assert.assertEquals(adr, newCustomerConformationPage.getEmailValue());
+    @When("Entered email address  is visible in the email-field")
+    public void canSeeEmailAddressInFieldSame() {
+        Assert.assertEquals(email, newCustomerConformationPage.getEmailValue());
     }
 
     @When("Make next click on sign in button")
@@ -41,25 +50,18 @@ public class PersonalTaskSteps {
         loginPage.clickOnWiggleIcon();
     }
 
-
     @When("Click wishlist link")
     public void clickWishlistLink() {
-    wishListPage.setWishListLink();
+        wishListPage.setWishListLink();
     }
 
-
-    @Then("Confirm that wishlist is empty")
+    @And("Confirm that wishlist is empty")
     public void confirmThatWishlistIsEmpty() {
+        Assert.assertTrue(wishListPage.wishListIsEmpty());
     }
 
-    @When("Click start shopping button")
+    @And("Click start shopping button")
     public void clickStartShoppingButton() {
+        wishListPage.startShippingButtonClick();
     }
-
-
 }
-    /*And Wishlist is loaded
-    Then Confirm that wishlist is empty
-    When Click start shopping button
-        Then Main page is loaded
-        And Close browser*/

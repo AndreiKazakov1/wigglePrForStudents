@@ -1,10 +1,6 @@
 package com.stv.factory.factorytests;
 
 import com.stv.framework.core.drivers.Driver;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
-import io.cucumber.java.AfterStep;
-import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
@@ -24,12 +20,8 @@ public class BasicFactoryTest {
         driver.manage().window().maximize();
     }
 
-
     @AfterClass
     public void afterClass() throws Exception {
         getDriver().quit();
     }
-
-
-
 }

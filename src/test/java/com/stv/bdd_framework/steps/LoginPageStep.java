@@ -23,12 +23,12 @@ public class LoginPageStep {
     }
 
     @And("The user click sing in button")
-    public void clickSignInButton(){
+    public void clickSignInButton() {
         loginPage.clickSignInButton();
     }
 
     @Then("Personal account page is loaded")
-    public void accountPageDisplayed(){
+    public void accountPageDisplayed() {
         Assert.assertTrue(personalAccountPage.isAccountPageDisplayed(), "Account page isn't loaded properly");
     }
 
@@ -46,11 +46,6 @@ public class LoginPageStep {
     public void errorMassageIsDisplayed() {
         Assert.assertTrue(loginPage.isErrorMassageDisplayed(), "Error Massage isn't visible");
     }
-
-
-
-
-
 }
 
 

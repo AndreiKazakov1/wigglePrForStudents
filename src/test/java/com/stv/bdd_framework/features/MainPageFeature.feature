@@ -1,3 +1,4 @@
+@MainPageFeature
 Feature: Go to login page
 
   Scenario: 01. Opening the main page
@@ -5,6 +6,6 @@ Feature: Go to login page
     When Click on trustButton
     And Click on account link
     Then Login page is loaded
-    And Close browser
+
 
 

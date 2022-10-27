@@ -23,7 +23,6 @@ public class MainFactoryTest extends BasicFactoryTest {
         Assert.assertEquals(actualResult, true, "Account link isn't visible");
     }
 
-
     @Ignore
     @Test (description = "Assert the login page is loaded", dependsOnMethods = "assertAccountIconIsDisplayed")
     public void assertLoginPageOpened() {
@@ -31,7 +30,6 @@ public class MainFactoryTest extends BasicFactoryTest {
         mainFactoryPage.clickOnAccountLink();
         Assert.assertEquals(new LoginPage().isLoginContainerDisplayed(), true, "Login page isn't loaded properly");
     }
-
 
     @Test (description = "Assert the account page is loaded")
     public void assertAccountPageOpened(){
@@ -44,7 +42,6 @@ public class MainFactoryTest extends BasicFactoryTest {
 
     }
 
-
     @Test (description = "unsuccessful transition to the confirmation page")
     public void assertConformationPageNon(){
         mainFactoryPage.clickOnTrustButton();
@@ -53,7 +50,5 @@ public class MainFactoryTest extends BasicFactoryTest {
         loginPage.clickContinueButton();
         boolean actualResult = loginPage.isErrorMassageDisplayed();
         Assert.assertEquals(actualResult, true, "Error Massage isn't visible");
-
     }
-
 }

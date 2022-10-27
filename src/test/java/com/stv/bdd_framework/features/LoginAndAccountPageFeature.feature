@@ -4,7 +4,7 @@ Feature: Personal account page success loading
     Given Main page is loaded
     When Click on trustButton
     And Click on account link
-    And Login page is loaded
+    Then Login page is loaded
 
   Scenario Outline: 021. Input valid email address
     When The user inputs valid email "<address>"
@@ -18,11 +18,11 @@ Feature: Personal account page success loading
       | password |
       | 111111   |
 
-
-  Scenario: 02. Go to personal account page (end)
-    And The user click sing in button
+  @LoginAndAccountPageFeature
+  Scenario: 02. Go to personal account page (ending)
+    When The user click sing in button
     Then  Personal account page is loaded
-    And Close browser
+
 
 
 
