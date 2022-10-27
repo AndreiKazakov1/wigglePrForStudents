@@ -7,23 +7,14 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
-
-import java.util.Random;
+import com.stv.framework.core.utils.RandomEmailMaker;
 
 
 public class PersonalTaskSteps {
     LoginPage loginPage = new LoginPage();
     NewCustomerConformationPage newCustomerConformationPage = new NewCustomerConformationPage();
     WishListPage wishListPage = new WishListPage();
-
-    public String randEmail() {
-        Random random = new Random();
-        int x = random.nextInt(9999);
-        String email = "test" + x + "@gmail.com";
-        return email;
-    }
-
-    String email = randEmail();
+    RandomEmailMaker randomEmailMaker = new RandomEmailMaker();
 
     @Then("Conformation page is loaded")
     public void conformationPageIsLoaded() {
@@ -32,12 +23,12 @@ public class PersonalTaskSteps {
 
     @And("Input valid email registration address")
     public void inputValidEmailRegistration() {
-        loginPage.inputValidEmailRegAddressCuc(email);
+        loginPage.inputValidEmailRegAddressCuc(randomEmailMaker.email);
     }
 
     @When("Entered email address  is visible in the email-field")
     public void canSeeEmailAddressInFieldSame() {
-        Assert.assertEquals(email, newCustomerConformationPage.getEmailValue());
+        Assert.assertEquals(randomEmailMaker.email, newCustomerConformationPage.getEmailValue());
     }
 
     @When("Make next click on sign in button")
