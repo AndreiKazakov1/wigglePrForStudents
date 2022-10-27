@@ -1,4 +1,4 @@
-@MainPageFeature
+@CloseBrowser
 Feature: Go to login page
 
   Scenario: 01. Opening the main page

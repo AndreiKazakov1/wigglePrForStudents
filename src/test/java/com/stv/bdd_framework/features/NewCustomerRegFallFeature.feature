@@ -6,7 +6,7 @@ Feature: Try to registration new customer
     And Click on account link
     Then Login page is loaded
 
-  @NewCustomerRegFallFeature
+  @CloseBrowser
   Scenario Outline: 031. Invalid email entering
     When Input invalid email registration "<address>"
     And Click continue button
