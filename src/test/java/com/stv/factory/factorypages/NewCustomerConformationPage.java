@@ -24,3 +24,7 @@ public class NewCustomerConformationPage extends FactoryPage {
 }
 
 
+#wiggle > div > div:nth-child(1) > div:nth-child(1) > p > a
+        #wiggle > div > div:nth-child(1) > div:nth-child(1) > p > a
+//*[@id="wiggle"]/div/div[1]/div[1]/p/a
+<a href="https://www.wiggle.co.uk/secure/myaccount/logon?ReturnUrl=%2Fsecure%2Faccount">Sign in</a>
