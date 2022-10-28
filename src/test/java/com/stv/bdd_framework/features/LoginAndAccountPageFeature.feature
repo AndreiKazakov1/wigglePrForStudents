@@ -18,7 +18,7 @@ Feature: Personal account page success loading
       | password |
       | 111111   |
 
-  @LoginAndAccountPageFeature
+  @CloseBrowser
   Scenario: 02. Go to personal account page (ending)
     When The user click sing in button
     Then  Personal account page is loaded

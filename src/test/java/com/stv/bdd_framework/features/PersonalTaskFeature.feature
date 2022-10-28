@@ -1,4 +1,4 @@
-@PersonalTaskFeature
+@CloseBrowser
 Feature: Go to main page after shopping page
 
   Scenario: 04. Login page loading
