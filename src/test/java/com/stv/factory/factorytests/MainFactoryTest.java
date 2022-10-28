@@ -37,7 +37,6 @@ public class MainFactoryTest extends BasicFactoryTest {
         loginPage.inputEmailPassword();
         loginPage.clickSignInButton();
         Assert.assertEquals(personalAccountPage.isAccountPageDisplayed(), true, "Account page isn't loaded properly");
-
     }
 
     @Test(description = "unsuccessful transition to the confirmation page")
